@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+	
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Aman  Dubey</title>
+		<link rel="shortcut icon" href="p1.png">		
+		<link rel="stylesheet" type="text/css" href="css/proj.css" />
+		<script src="js/jquery-2.1.1.js"> </script>
+		<script src="js/jquery.ticker.js"> </script>
+		
+		
+
+
+	</head>
+	
+	
+	<body link="black">
+	<header>
+	
+    <div class="titlebar">
+	
+	<h2>
+	<a href="index.html">
+	<image src="p1.png " alt="ashe" width="35" height="35" />
+	 Aman Dubey
+	</a>
+	
+	</div>
+		</h2>
+	
+		<div class="ticker">
+			<ul>
+			<li>HACKING MY WAY TO SUCCESS ... </li>    </ul>
+		
+	</div>
+	<div class="menu_simple" > 
+			<ul>
+				</br><li><a href="index.html" >Home</a></li></br>
+				<li><a href="about.html">About Me</a></li></br>
+				<li><a href="project.html">Projects</a></li></br>
+				<li><a href="#">Blog</a></li></br>
+				<li><a href="cv.pdf" target="_blank">Resume</a></li></br>
+				<li><a href="contact.html">Contact Me</a></li></br>
+			</br></br>
+		<h3>amandubey.com</h3>
+			</ul>
+	
+		</div>
+		
+	</header>
+	
+	
+	<div class="proj">
+		<div class="comm">
+					
+		<h4>Smart Doorbell<hr> </h4>			
+		<p>After my 3rd semester, I decided to try my hands on some real-life projects
+		   and so, I opted to learn BeagleBone Black for that. 
+		   I have done this project during my winter traning program at Centre of Excellence at Netaji Subhas Institute of Technology, New Delhi under Prof. D V Gadre.
+			</br><image src="images/doorbell_prototype.png " alt="Doorbell Prototype" width="300" height="200" style="float:left; margin:10px;"/>
+		</br>&nbsp;&nbsp;&nbsp;&nbsp;This is an IoT based project which uses BeagleBone Black and WhatsApp for its implmentation.
+		Communication between BeagleBone and WhatsApp have been done through Yowsup API.
+		Yowsup is a python library that allows us to use WhatsApp service in Linux systems. 
+		It provides most features of an official WhatsApp client in a shell environment such as sending and receiving text messages as well as multimedia messages. 
+	</p>
+	<p> This project focuses on two aspects of smart doorbell i.e. occupant’s end and visitor’s end. 
+	<image src="images/microphone.jpg " alt="Microphone" width="250" height="200" style="float:right; margin:10px;"/>
+	Smart doorbell is capable of clicking photos, recording audio and creating an alarm system with notification alerts on WhatsApp having picture and audio of the visitor. 
+	This was implemented to allow real time monitoring of the door. 
+	</br>Here BeagleBone Black is connected with Camera, speaker and microphone through USB hub. According to functionality of components work was assigned.
+	When visitor presses the doorbell, camera clicks photo and at the same time user was asked to record 5sec audio. 
+	Beaglebone sends both image and audio to occupants WhatsApp. If occupant wants to give some message, he can do so by recording on WhatsApp and user can hear it with the help of speakers.</p>
+	</br><image src="images/usb.jpg " alt="Usb" width="250" height="200" style="float:left; margin:10px;"/>
+	<image src="images/camera.jpg " alt="Camera" width="250" height="200" style="float:right; margin:10px;"/>
+	</br></br></br></br></br></br></br></br></br></br></br><strong>Souce code(python) for wamedia is available below:</strong>
+	</br>Wamedia Library: <a href="wamedia.txt" target="_blank" style="float:center; font-size:20px; color:blue; "><strong>wamedia_send.py</strong></a>
+	</br>Import wamedia and BeagleBone libraries in the program and make changes accordingly in your program
+	<p style="font-family:arial;">
+	def credential():
+    </br>return "91955XXXXXXX","password" 
+	</br>def sendaudio():
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;try:
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;   stack = SendMediaStack(credential(),[(["919545XXXXXX-user-id", "audio.wav"])])
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;   stack.start()
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;except ImageSent as e:
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;    if ("ERROR" in e.value): 
+    </br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                print("Could not send the image!") 
+	</p>
+	<p>Try this by using RaspberryPi and Beaglebone Black & this will work surely.</p>
+
+	</div>
+		
+		
+	</div>
+				
+					
+	
+	<script>
+		$('.ticker').ticker();
+	</script>
+	
+	
+
+                  
+	<footer class="copyr">
+		<p>Copyright© 2016- AMAN DUBEY</p>
+		All Rights Are Reserved 
+	</footer>
+	</body>
+</html>
